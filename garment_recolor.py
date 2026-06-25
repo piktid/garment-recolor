@@ -236,7 +236,7 @@ class GarmentRecolor:
             return []
 
         # Find all image files (skip dotfiles and hidden)
-        image_extensions = [".jpg", ".jpeg", ".png"]
+        image_extensions = [".jpg", ".jpeg", ".png", ".webp"]
         image_files = [
             f for f in sorted(self.input_folder.iterdir())
             if f.is_file()
