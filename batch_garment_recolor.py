@@ -150,9 +150,10 @@ def main():
     generation_group = parser.add_argument_group("generation options")
     generation_group.add_argument(
         "--model",
-        choices=["auto", "nano_banana_2", "nano_banana_pro", "seedream", "gpt_image"],
+        choices=["auto", "nano_banana_2", "nano_banana_pro", "seedream", "seedream_5_pro",
+                 "gpt_image", "gpt_image_2_5"],
         default="auto",
-        help="Generation engine: auto | nano_banana_2 | nano_banana_pro | seedream | gpt_image. "
+        help="Generation engine: auto | nano_banana_2 | nano_banana_pro | seedream | seedream_5_pro | gpt_image | gpt_image_2_5. "
              "'auto' (default) uses the default engine with a safety fallback.",
     )
     generation_group.add_argument(

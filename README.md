@@ -192,7 +192,7 @@ Leave both on for catalog-style sets where the colour must match across images; 
 
 **Generation options:**
 ```
---model               Generation engine: auto | nano_banana_2 | nano_banana_pro | seedream | gpt_image (default: auto)
+--model               Generation engine: auto | nano_banana_2 | nano_banana_pro | seedream | seedream_5_pro | gpt_image | gpt_image_2_5 (default: auto)
 --no-use-anchor       Disable cross-output consistency (on by default)
 --no-post-process     Disable the finishing pass (on by default)
 --add-ai-watermark    Bake an "AI-generated" disclosure mark into each output (irreversible)
@@ -210,7 +210,7 @@ $ python garment_recolor.py \
   --model nano_banana_pro
 ```
 
-Accepted values: `auto` (default), `nano_banana_2`, `nano_banana_pro`, `seedream`, `gpt_image`. Forcing a specific engine disables the safety fallback — if that engine refuses the content, the job fails instead of switching engines.
+Accepted values: `auto` (default), `nano_banana_2`, `nano_banana_pro`, `seedream`, `seedream_5_pro`, `gpt_image`, `gpt_image_2_5`. Forcing a specific engine disables the safety fallback — if that engine refuses the content, the job fails instead of switching engines.
 
 Each entry in the job results response carries a `model_used` field indicating which engine actually produced that image. The script prints it next to each downloaded file (e.g. `Downloaded: output_0_0_v0.jpg (model: nano_banana_pro)`) and the raw value is preserved in `metadata.json`.
 
